@@ -272,7 +272,7 @@ public class StudentInfo extends javax.swing.JFrame {
             
         } catch(Exception e) {
             
-        }
+            }
         
         }
     }//GEN-LAST:event_medicalInfoTAKeyPressed

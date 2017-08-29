@@ -106,12 +106,12 @@ public class PastVisits extends javax.swing.JFrame {
         reasonTF.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         reasonTF.setBorder(null);
         reasonTF.setOpaque(false);
-        getContentPane().add(reasonTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 1450, 620, 70));
+        getContentPane().add(reasonTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 1440, 620, 80));
 
         prescriptionTF.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         prescriptionTF.setBorder(null);
         prescriptionTF.setOpaque(false);
-        getContentPane().add(prescriptionTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(1880, 1450, 620, 70));
+        getContentPane().add(prescriptionTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(1890, 1450, 620, 70));
 
         dateTF.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         dateTF.setBorder(null);

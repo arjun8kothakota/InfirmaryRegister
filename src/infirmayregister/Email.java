@@ -5,6 +5,7 @@
  */
 package infirmayregister;
 
+import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -44,8 +45,9 @@ public class Email extends javax.swing.JFrame {
             resultSet=statement.executeQuery(sql);
             if(resultSet.next()){
                 String motherEmail = resultSet.getString("motherEmail");
+                String fatherEmail = resultSet.getString("fatherEmail");
                 toEmailTxt.setEnabled(true);              
-                toEmailTxt.setText(motherEmail);
+                toEmailTxt.setText(motherEmail + ", " + fatherEmail);
                                                                              
             }
             resultSet.close();
@@ -83,6 +85,11 @@ public class Email extends javax.swing.JFrame {
         sendLbl.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 sendLblMouseReleased(evt);
+            }
+        });
+        sendLbl.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                sendLblKeyPressed(evt);
             }
         });
         getContentPane().add(sendLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(2050, 1480, 400, 100));
@@ -163,6 +170,13 @@ public class Email extends javax.swing.JFrame {
     private void subjectEmailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subjectEmailTxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_subjectEmailTxtActionPerformed
+
+    private void sendLblKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_sendLblKeyPressed
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            SendEmail sendEmail= new SendEmail(toEmailTxt.getText(), subjectEmailTxt.getText(), messageEmailTA.getText());
+            jOptionPane1.showMessageDialog(rootPane, "Your mail has been sent");
+        }
+    }//GEN-LAST:event_sendLblKeyPressed
 
     /**
      * @param args the command line arguments

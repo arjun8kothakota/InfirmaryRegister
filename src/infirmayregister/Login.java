@@ -98,7 +98,7 @@ public class Login extends javax.swing.JFrame {
                 this.dispose();
                 } else {
                 
-                jOptionPane1.showMessageDialog(rootPane,"Invalid Username/Password");
+                jOptionPane1.showMessageDialog(rootPane,"Invalid Username/");
             }
             
             rs.close();
@@ -107,11 +107,13 @@ public class Login extends javax.swing.JFrame {
       
         } catch (Exception e) {
             
-            if (usernameTF.equals("") || passwordTF.equals("")) {
+            if (usernameTF.getText() == "" || passwordTF.getText() == "" ) {
                 jOptionPane1.showMessageDialog(rootPane ,"Please enter a Username/Password");
-            } else {
-                jOptionPane1.showMessageDialog(rootPane ,"can't connect now");
-            }               
+                
+            }else {
+                jOptionPane1.showMessageDialog(rootPane ,"Invalid Username/Password");
+            }     
+           
             
             passwordTF.setText("");
             usernameTF.setText("");
@@ -158,7 +160,7 @@ public class Login extends javax.swing.JFrame {
             if (usernameTF.equals("") || passwordTF.equals("")) {
                 jOptionPane1.showMessageDialog(rootPane ,"Please enter a Username/Password");
             } else {
-                jOptionPane1.showMessageDialog(rootPane ,"can't connect now");
+                jOptionPane1.showMessageDialog(rootPane ,"Invalid Username/Password");
             }               
             
             passwordTF.setText("");
@@ -195,6 +197,15 @@ public class Login extends javax.swing.JFrame {
         }
          java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                
+                  try{
+                
+                    Thread.sleep(4500);
+                    
+                }catch(Exception e){
+                
+                }
+                
                 new Login().setVisible(true);
             }
         });

@@ -49,9 +49,7 @@ public class StudentVisits extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(2560, 1600));
         setMinimumSize(new java.awt.Dimension(2560, 1600));
-        setPreferredSize(new java.awt.Dimension(2260, 1600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         dateTF.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -108,6 +106,11 @@ public class StudentVisits extends javax.swing.JFrame {
                 studentCountLblMouseReleased(evt);
             }
         });
+        studentCountLbl.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                studentCountLblKeyPressed(evt);
+            }
+        });
         getContentPane().add(studentCountLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1630, 350, 220, 80));
 
         clearLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -121,7 +124,8 @@ public class StudentVisits extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/arjun/images/Student Visits Layout.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 2940, 1600));
 
-        setBounds(0, 0, 2586, 1671);
+        setSize(new java.awt.Dimension(2586, 1671));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void backLblMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backLblMouseReleased
@@ -154,9 +158,7 @@ public class StudentVisits extends javax.swing.JFrame {
                 if (studentCountLbl.getText() == "") {
                     
                     tableModel.addRow(new Object[] {studentID, date, reasonForVisit, prescriptionGiven}); 
-            }
-                
-                
+                }
             }
         
             resultSet.close();
@@ -198,6 +200,8 @@ public class StudentVisits extends javax.swing.JFrame {
         catch(Exception e){
             System.out.println("Catch is caught");
         }
+        
+        studentCountLbl.requestFocus();
         
     }//GEN-LAST:event_enterLblMouseReleased
   
@@ -206,74 +210,7 @@ public class StudentVisits extends javax.swing.JFrame {
     }//GEN-LAST:event_studentCountLblMouseReleased
 
     private void enterLblKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_enterLblKeyPressed
-        
-        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
-        
-             String string=null;
-        Statement statement=null;
-        ResultSet resultSet= null;
-        
-        try{
-            DefaultTableModel tableModel = (DefaultTableModel) dateTable.getModel();
-            Class.forName("java.sql.Driver");
-            String database = "jdbc:mysql://localhost:3306/infirmary";
-            Connection connection = (Connection) DriverManager.getConnection(database, "root", "arjun");
-            statement = (com.mysql.jdbc.Statement) connection.createStatement();
-            String sql = "select * from PastVisits where Date = '"+dateTF.getText()+"';";
-            
-            resultSet=statement.executeQuery(sql);
-            while (resultSet.next()){
-            
-                String date= resultSet.getString("Date");
-                String studentID = resultSet.getString("StudentID");
-                String reasonForVisit = resultSet.getString("Reason");
-                String prescriptionGiven = resultSet.getString("Prescription");
-               
-
-                tableModel.addRow(new Object[] {date, studentID, reasonForVisit, prescriptionGiven});
-                
-            }
-        
-            resultSet.close();
-            statement.close();
-            connection.close();
-            
-            if (dateTF.equals("")) {
-                jOptionPane1.showMessageDialog(rootPane, "Please enter a date");
-            } 
-            
-        }
-        catch(Exception e){
-            System.out.println("Catch is caught");
-        }
-        
-        try{
-            DefaultTableModel tableModel = (DefaultTableModel) dateTable.getModel();
-            Class.forName("java.sql.Driver");
-            String database = "jdbc:mysql://localhost:3306/infirmary";
-            Connection connection = (Connection) DriverManager.getConnection(database, "root", "arjun");
-            statement = (com.mysql.jdbc.Statement) connection.createStatement();
-            String sql = "select count(*) from PastVisits where Date = '"+dateTF.getText()+"';";
-            
-            resultSet=statement.executeQuery(sql);
-            while (resultSet.next()){
-                
-                String sum = resultSet.getString("count(*)");
-                studentCountLbl.setText(sum);
-                
-            }
-        
-            resultSet.close();
-            statement.close();
-            connection.close();
-          
-        }
-        catch(Exception e){
-            System.out.println("Catch is caught");
-        }
-        
-    }
-        
+       
     }//GEN-LAST:event_enterLblKeyPressed
 
     private void clearLblMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clearLblMouseReleased
@@ -281,8 +218,13 @@ public class StudentVisits extends javax.swing.JFrame {
         dateTable.setModel(new DefaultTableModel(null, new String[]{"StudentID", "Date", "Reason", "Prescription"}));
         dateTF.setText("");
         studentCountLbl.setText("");
+        dateTF.requestFocus();
         
     }//GEN-LAST:event_clearLblMouseReleased
+
+    private void studentCountLblKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_studentCountLblKeyPressed
+        
+    }//GEN-LAST:event_studentCountLblKeyPressed
 
     /**
      * @param args the command line arguments

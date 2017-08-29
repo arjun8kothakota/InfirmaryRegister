@@ -42,6 +42,10 @@ public class StudentLogin extends javax.swing.JFrame {
 
         jLabel1.setText("jLabel1");
 
+        jOptionPane1.setMaximumSize(new java.awt.Dimension(500, 500));
+        jOptionPane1.setMinimumSize(new java.awt.Dimension(500, 500));
+        jOptionPane1.setPreferredSize(new java.awt.Dimension(500, 500));
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -114,16 +118,18 @@ public class StudentLogin extends javax.swing.JFrame {
             statement.close();
             connection.close();
             
-            if(string.equals(studentID)){
+            if(string.equalsIgnoreCase(studentID)){
                 StudentInfo studentInfoFrame= new StudentInfo();
                 studentID= studentIDTF.getText();                              
                 new StudentInfo(studentID).setVisible(true);
                 this.dispose();
-            } 
+            } else if(string.equalsIgnoreCase(studentID)){
+                jOptionPane1.showMessageDialog(rootPane, "Please check for Capital Case");
+            }
             
             
         }
-        catch(Exception e){
+        catch(Exception e){        
             studentIDTF.setText("");
             jOptionPane1.showMessageDialog(rootPane, "This is an invalid Student ID");
         }
@@ -136,7 +142,7 @@ public class StudentLogin extends javax.swing.JFrame {
         String studentID= studentIDTF.getText();
         String string=null;
         Statement statement=null;
-        ResultSet resultSet= null;
+        ResultSet resultSet= null; 
         
         try {
 
@@ -158,13 +164,14 @@ public class StudentLogin extends javax.swing.JFrame {
                 studentID= studentIDTF.getText();                              
                 new StudentInfo(studentID).setVisible(true);
                 this.dispose();
-            } 
-            
+            } else if(string.equalsIgnoreCase(studentID)){
+                jOptionPane1.showMessageDialog(rootPane, "Please check for Capital Case");
+            }
             
         }
         catch(Exception e){
-            studentIDTF.setText("");
-            jOptionPane1.showMessageDialog(rootPane, "This is an invalid Student ID");
+                studentIDTF.setText("");
+                jOptionPane1.showMessageDialog(rootPane, "This is an invalid Student ID");
             }  
         }
     }//GEN-LAST:event_studentIDTFKeyPressed
