@@ -17,7 +17,7 @@ import java.util.GregorianCalendar;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.html.parser.DTDConstants;
-import sun.util.BuddhistCalendar;
+
 
 /**
  *
@@ -86,14 +86,16 @@ public class PastVisits extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         pastVisitsTable = new javax.swing.JTable();
         timeTF = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(2561, 1600));
+        setMaximumSize(new java.awt.Dimension(1019, 760));
+        setMinimumSize(new java.awt.Dimension(1019, 760));
+        setPreferredSize(new java.awt.Dimension(1019, 760));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         studentIDTF.setEditable(false);
-        studentIDTF.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        studentIDTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         studentIDTF.setBorder(null);
         studentIDTF.setOpaque(false);
         studentIDTF.addActionListener(new java.awt.event.ActionListener() {
@@ -101,22 +103,22 @@ public class PastVisits extends javax.swing.JFrame {
                 studentIDTFActionPerformed(evt);
             }
         });
-        getContentPane().add(studentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 620, 70));
+        getContentPane().add(studentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 280, 40));
 
-        reasonTF.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        reasonTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         reasonTF.setBorder(null);
         reasonTF.setOpaque(false);
-        getContentPane().add(reasonTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 1440, 620, 80));
+        getContentPane().add(reasonTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 640, 280, 40));
 
-        prescriptionTF.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        prescriptionTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         prescriptionTF.setBorder(null);
         prescriptionTF.setOpaque(false);
-        getContentPane().add(prescriptionTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(1890, 1450, 620, 70));
+        getContentPane().add(prescriptionTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 640, 280, 40));
 
-        dateTF.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        dateTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         dateTF.setBorder(null);
         dateTF.setOpaque(false);
-        getContentPane().add(dateTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 1450, 620, 70));
+        getContentPane().add(dateTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 640, 280, 40));
 
         addLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         addLbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -124,7 +126,7 @@ public class PastVisits extends javax.swing.JFrame {
                 addLblMouseReleased(evt);
             }
         });
-        getContentPane().add(addLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 490, 310, 90));
+        getContentPane().add(addLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 200, 50));
 
         deleteLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         deleteLbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -132,7 +134,7 @@ public class PastVisits extends javax.swing.JFrame {
                 deleteLblMouseReleased(evt);
             }
         });
-        getContentPane().add(deleteLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 490, 310, 90));
+        getContentPane().add(deleteLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 220, 200, 50));
 
         updateLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         updateLbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -140,7 +142,7 @@ public class PastVisits extends javax.swing.JFrame {
                 updateLblMouseReleased(evt);
             }
         });
-        getContentPane().add(updateLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 490, 310, 90));
+        getContentPane().add(updateLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 220, 190, 50));
 
         draftMailLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         draftMailLbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -148,7 +150,7 @@ public class PastVisits extends javax.swing.JFrame {
                 draftMailLblMouseReleased(evt);
             }
         });
-        getContentPane().add(draftMailLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(2200, 490, 310, 90));
+        getContentPane().add(draftMailLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(2230, 290, 310, 90));
 
         backLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         backLbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -156,7 +158,7 @@ public class PastVisits extends javax.swing.JFrame {
                 backLblMouseReleased(evt);
             }
         });
-        getContentPane().add(backLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(2360, 100, 200, 90));
+        getContentPane().add(backLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 60, 80, 40));
 
         pastVisitsTable.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(66, 133, 244), 3, true));
         pastVisitsTable.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
@@ -191,16 +193,16 @@ public class PastVisits extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(pastVisitsTable);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 610, 2560, 820));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 1020, 330));
 
-        timeTF.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        timeTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         timeTF.setBorder(null);
         timeTF.setCaretColor(new java.awt.Color(237, 230, 230));
         timeTF.setOpaque(false);
-        getContentPane().add(timeTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 490, 620, 80));
+        getContentPane().add(timeTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 230, 210, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/arjun/images/Past Visits Layout.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 2560, 1590));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/arjun/images/Past Visits Layout.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 760));
 
         pack();
         setLocationRelativeTo(null);
@@ -501,7 +503,7 @@ public class PastVisits extends javax.swing.JFrame {
     private javax.swing.JTextField dateTF;
     private javax.swing.JLabel deleteLbl;
     private javax.swing.JLabel draftMailLbl;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JOptionPane jOptionPane1;
     private javax.swing.JOptionPane jOptionPane2;
     private javax.swing.JScrollPane jScrollPane1;

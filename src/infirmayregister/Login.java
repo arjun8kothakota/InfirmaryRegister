@@ -38,13 +38,15 @@ public class Login extends javax.swing.JFrame {
         passwordTF = new javax.swing.JPasswordField();
         usernameTF = new javax.swing.JTextField();
         loginLbl = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(2585, 1660));
+        setMaximumSize(new java.awt.Dimension(1019, 768));
+        setMinimumSize(new java.awt.Dimension(1019, 768));
+        setPreferredSize(new java.awt.Dimension(1019, 768));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        passwordTF.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        passwordTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         passwordTF.setBorder(null);
         passwordTF.setOpaque(false);
         passwordTF.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -52,12 +54,12 @@ public class Login extends javax.swing.JFrame {
                 passwordTFKeyPressed(evt);
             }
         });
-        getContentPane().add(passwordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(1300, 730, 610, 70));
+        getContentPane().add(passwordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, 280, 40));
 
-        usernameTF.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        usernameTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         usernameTF.setBorder(null);
         usernameTF.setOpaque(false);
-        getContentPane().add(usernameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(1300, 570, 610, 70));
+        getContentPane().add(usernameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 280, 40));
 
         loginLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         loginLbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -65,10 +67,10 @@ public class Login extends javax.swing.JFrame {
                 loginLblMouseReleased(evt);
             }
         });
-        getContentPane().add(loginLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 1250, 530, 110));
+        getContentPane().add(loginLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 650, 240, 50));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/arjun/images/Login layout.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 2550, 1600));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/arjun/images/Login layout.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -212,7 +214,7 @@ public class Login extends javax.swing.JFrame {
      }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JOptionPane jOptionPane1;
     private javax.swing.JLabel loginLbl;
     private javax.swing.JPasswordField passwordTF;

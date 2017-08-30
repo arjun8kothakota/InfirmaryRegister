@@ -1,5 +1,6 @@
+SplashScreen-Image: AppPackage/logo.png
 Manifest-Version: 1.0
 X-COMMENT: Main-Class will be added automatically by build
 
-SplashScreen-Image: AppPackage/logo.png
+
 

@@ -72,13 +72,15 @@ public class Email extends javax.swing.JFrame {
         backLbl = new javax.swing.JLabel();
         subjectEmailTxt = new javax.swing.JTextField();
         toEmailTxt = new javax.swing.JTextField();
-        logoutLbl = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         messageEmailTA = new javax.swing.JTextArea();
         studentIDTF = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1019, 768));
+        setMinimumSize(new java.awt.Dimension(1019, 768));
+        setPreferredSize(new java.awt.Dimension(1019, 768));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         sendLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -92,7 +94,7 @@ public class Email extends javax.swing.JFrame {
                 sendLblKeyPressed(evt);
             }
         });
-        getContentPane().add(sendLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(2050, 1480, 400, 100));
+        getContentPane().add(sendLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 680, 190, 50));
 
         backLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         backLbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -100,10 +102,10 @@ public class Email extends javax.swing.JFrame {
                 backLblMouseReleased(evt);
             }
         });
-        getContentPane().add(backLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(2356, 116, 180, 70));
+        getContentPane().add(backLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 70, 80, 40));
 
         subjectEmailTxt.setBackground(new java.awt.Color(225, 225, 225));
-        subjectEmailTxt.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        subjectEmailTxt.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         subjectEmailTxt.setText("Visit to the Infirmary : ");
         subjectEmailTxt.setBorder(null);
         subjectEmailTxt.setOpaque(false);
@@ -112,21 +114,13 @@ public class Email extends javax.swing.JFrame {
                 subjectEmailTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(subjectEmailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 690, 2340, 90));
+        getContentPane().add(subjectEmailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 950, 40));
 
         toEmailTxt.setBackground(new java.awt.Color(225, 225, 225));
         toEmailTxt.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         toEmailTxt.setBorder(null);
         toEmailTxt.setOpaque(false);
-        getContentPane().add(toEmailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 460, 2340, 90));
-
-        logoutLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        logoutLbl.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                logoutLblMouseReleased(evt);
-            }
-        });
-        getContentPane().add(logoutLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 1476, 400, 100));
+        getContentPane().add(toEmailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 950, 40));
 
         jScrollPane1.setBorder(null);
 
@@ -137,15 +131,15 @@ public class Email extends javax.swing.JFrame {
         messageEmailTA.setBorder(null);
         jScrollPane1.setViewportView(messageEmailTA);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 900, 2340, 530));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 950, 240));
 
         studentIDTF.setEditable(false);
         studentIDTF.setBackground(new java.awt.Color(255, 255, 255));
         studentIDTF.setBorder(null);
-        getContentPane().add(studentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, 300, 60));
+        getContentPane().add(studentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 300, 60));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/arjun/images/Email layout.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 2560, 1600));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/arjun/images/Email layout.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 770));
 
         pack();
         setLocationRelativeTo(null);
@@ -161,12 +155,6 @@ public class Email extends javax.swing.JFrame {
         jOptionPane1.showMessageDialog(rootPane, "Your mail has been sent");
     }//GEN-LAST:event_sendLblMouseReleased
     
-    private void logoutLblMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutLblMouseReleased
-        Login loginFrame = new Login();
-        loginFrame.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_logoutLblMouseReleased
-
     private void subjectEmailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subjectEmailTxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_subjectEmailTxtActionPerformed
@@ -215,10 +203,9 @@ public class Email extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel backLbl;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JOptionPane jOptionPane1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel logoutLbl;
     private javax.swing.JTextArea messageEmailTA;
     private javax.swing.JLabel sendLbl;
     private javax.swing.JTextField studentIDTF;
