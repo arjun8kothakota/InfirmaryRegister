@@ -41,9 +41,9 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1019, 768));
-        setMinimumSize(new java.awt.Dimension(1019, 768));
-        setPreferredSize(new java.awt.Dimension(1019, 768));
+        setMaximumSize(new java.awt.Dimension(1023, 768));
+        setMinimumSize(new java.awt.Dimension(1023, 768));
+        setPreferredSize(new java.awt.Dimension(1023, 768));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         passwordTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -54,12 +54,17 @@ public class Login extends javax.swing.JFrame {
                 passwordTFKeyPressed(evt);
             }
         });
-        getContentPane().add(passwordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, 280, 40));
+        getContentPane().add(passwordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, 280, 30));
 
         usernameTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         usernameTF.setBorder(null);
         usernameTF.setOpaque(false);
-        getContentPane().add(usernameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 280, 40));
+        usernameTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameTFActionPerformed(evt);
+            }
+        });
+        getContentPane().add(usernameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 320, 280, 30));
 
         loginLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         loginLbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -100,7 +105,7 @@ public class Login extends javax.swing.JFrame {
                 this.dispose();
                 } else {
                 
-                jOptionPane1.showMessageDialog(rootPane,"Invalid Username/");
+                jOptionPane1.showMessageDialog(rootPane,"Invalid Username/Password");
             }
             
             rs.close();
@@ -173,6 +178,10 @@ public class Login extends javax.swing.JFrame {
         
         }
     }//GEN-LAST:event_passwordTFKeyPressed
+
+    private void usernameTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usernameTFActionPerformed
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {                                     
     }      

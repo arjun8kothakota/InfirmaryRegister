@@ -146,7 +146,7 @@ public class Email extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void backLblMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backLblMouseReleased
-        new PastVisits(studentIDTF.getText()).setVisible(true);
+        new HomePage(studentIDTF.getText()).setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backLblMouseReleased
 

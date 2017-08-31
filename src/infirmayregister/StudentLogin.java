@@ -22,6 +22,8 @@ public class StudentLogin extends javax.swing.JFrame {
     public StudentLogin() {
         initComponents();
     }
+    
+    
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -123,9 +125,9 @@ public class StudentLogin extends javax.swing.JFrame {
             connection.close();
             
             if(string.equalsIgnoreCase(studentID)){
-                StudentInfo studentInfoFrame= new StudentInfo();
+                HomePage homePage= new HomePage();
                 studentID= studentIDTF.getText();                              
-                new StudentInfo(studentID).setVisible(true);
+                new HomePage(studentID).setVisible(true);
                 this.dispose();
             } else if(string.equalsIgnoreCase(studentID)){
                 jOptionPane1.showMessageDialog(rootPane, "Please check for Capital Case");
@@ -164,9 +166,9 @@ public class StudentLogin extends javax.swing.JFrame {
             connection.close();
             
             if(string.equals(studentID)){
-                StudentInfo studentInfoFrame= new StudentInfo();
+                HomePage homePage= new HomePage();
                 studentID= studentIDTF.getText();                              
-                new StudentInfo(studentID).setVisible(true);
+                new HomePage(studentID).setVisible(true);
                 this.dispose();
             } else if(string.equalsIgnoreCase(studentID)){
                 jOptionPane1.showMessageDialog(rootPane, "Please check for Capital Case");

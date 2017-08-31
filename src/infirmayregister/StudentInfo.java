@@ -175,7 +175,7 @@ public class StudentInfo extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(medicalInfoTA);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 520, 420, 150));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 520, 420, 140));
 
         mMobileTF.setEditable(false);
         mMobileTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -198,25 +198,25 @@ public class StudentInfo extends javax.swing.JFrame {
         studentNameTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         studentNameTF.setBorder(null);
         studentNameTF.setOpaque(false);
-        getContentPane().add(studentNameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 270, 30));
+        getContentPane().add(studentNameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, 270, 40));
 
         classTF.setEditable(false);
         classTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         classTF.setBorder(null);
         classTF.setOpaque(false);
-        getContentPane().add(classTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, 270, 30));
+        getContentPane().add(classTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, 270, 40));
 
         boardTF.setEditable(false);
         boardTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         boardTF.setBorder(null);
         boardTF.setOpaque(false);
-        getContentPane().add(boardTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 270, 30));
+        getContentPane().add(boardTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, 270, 40));
 
         studentIDTF2.setEditable(false);
         studentIDTF2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         studentIDTF2.setBorder(null);
         studentIDTF2.setOpaque(false);
-        getContentPane().add(studentIDTF2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 270, 30));
+        getContentPane().add(studentIDTF2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, 270, 30));
 
         jScrollPane2.setBackground(new java.awt.Color(225, 225, 225));
         jScrollPane2.setBorder(null);
@@ -234,7 +234,7 @@ public class StudentInfo extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(addressTA1);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, 420, 150));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, 420, 140));
 
         dobTF.setEditable(false);
         dobTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -250,16 +250,15 @@ public class StudentInfo extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/arjun/images/Student Info page layout.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 770));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 760));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void editLblMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editLblMouseReleased
-       medicalInfoTA.setEditable(true);
-       medicalInfoTA.requestFocus();
-       
+                medicalInfoTA.setEditable(true);
+                medicalInfoTA.requestFocus();
     }//GEN-LAST:event_editLblMouseReleased
 
     private void visitsLblMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_visitsLblMouseReleased
@@ -292,8 +291,8 @@ public class StudentInfo extends javax.swing.JFrame {
     }//GEN-LAST:event_updateLblMouseReleased
 
     private void exitLblMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitLblMouseReleased
-        StudentLogin studentLoginForm= new StudentLogin();
-        studentLoginForm.setVisible(true);
+        HomePage homePage= new HomePage(studentIDTF2.getText());
+        homePage.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_exitLblMouseReleased
 
@@ -325,11 +324,7 @@ public class StudentInfo extends javax.swing.JFrame {
     }//GEN-LAST:event_medicalInfoTAKeyPressed
 
     private void exitLblKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_exitLblKeyPressed
-          if(evt.getKeyCode()==KeyEvent.VK_CONTROL+KeyEvent.VK_BACK_SPACE){
-              StudentLogin studentLoginForm= new StudentLogin();
-              studentLoginForm.setVisible(true);
-              this.dispose();
-          }  
+          
     }//GEN-LAST:event_exitLblKeyPressed
 
     private void addressTA1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_addressTA1KeyPressed

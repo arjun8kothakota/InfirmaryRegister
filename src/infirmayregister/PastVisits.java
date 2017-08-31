@@ -103,7 +103,7 @@ public class PastVisits extends javax.swing.JFrame {
                 studentIDTFActionPerformed(evt);
             }
         });
-        getContentPane().add(studentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 280, 40));
+        getContentPane().add(studentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 270, 40));
 
         reasonTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         reasonTF.setBorder(null);
@@ -113,7 +113,7 @@ public class PastVisits extends javax.swing.JFrame {
         prescriptionTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         prescriptionTF.setBorder(null);
         prescriptionTF.setOpaque(false);
-        getContentPane().add(prescriptionTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 640, 280, 40));
+        getContentPane().add(prescriptionTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 640, 270, 40));
 
         dateTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         dateTF.setBorder(null);
@@ -446,7 +446,7 @@ public class PastVisits extends javax.swing.JFrame {
 
     private void backLblMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backLblMouseReleased
             String studentID = studentIDTF.getText();                              
-            new StudentInfo(studentID).setVisible(true);
+            new HomePage(studentID).setVisible(true);
             this.dispose();
     }//GEN-LAST:event_backLblMouseReleased
 
