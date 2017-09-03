@@ -89,9 +89,9 @@ public class PastVisits extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1019, 760));
-        setMinimumSize(new java.awt.Dimension(1019, 760));
-        setPreferredSize(new java.awt.Dimension(1019, 760));
+        setMaximumSize(new java.awt.Dimension(1385, 830));
+        setMinimumSize(new java.awt.Dimension(1385, 830));
+        setPreferredSize(new java.awt.Dimension(1385, 830));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         studentIDTF.setEditable(false);
@@ -103,22 +103,22 @@ public class PastVisits extends javax.swing.JFrame {
                 studentIDTFActionPerformed(evt);
             }
         });
-        getContentPane().add(studentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 270, 40));
+        getContentPane().add(studentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 310, 40));
 
         reasonTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         reasonTF.setBorder(null);
         reasonTF.setOpaque(false);
-        getContentPane().add(reasonTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 640, 280, 40));
+        getContentPane().add(reasonTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 680, 310, 40));
 
         prescriptionTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         prescriptionTF.setBorder(null);
         prescriptionTF.setOpaque(false);
-        getContentPane().add(prescriptionTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 640, 270, 40));
+        getContentPane().add(prescriptionTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 680, 310, 40));
 
         dateTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         dateTF.setBorder(null);
         dateTF.setOpaque(false);
-        getContentPane().add(dateTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 640, 280, 40));
+        getContentPane().add(dateTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 680, 310, 40));
 
         addLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         addLbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -126,7 +126,7 @@ public class PastVisits extends javax.swing.JFrame {
                 addLblMouseReleased(evt);
             }
         });
-        getContentPane().add(addLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 200, 50));
+        getContentPane().add(addLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 230, 60));
 
         deleteLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         deleteLbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -134,7 +134,7 @@ public class PastVisits extends javax.swing.JFrame {
                 deleteLblMouseReleased(evt);
             }
         });
-        getContentPane().add(deleteLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 220, 200, 50));
+        getContentPane().add(deleteLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 220, 230, 60));
 
         updateLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         updateLbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -142,7 +142,7 @@ public class PastVisits extends javax.swing.JFrame {
                 updateLblMouseReleased(evt);
             }
         });
-        getContentPane().add(updateLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 220, 190, 50));
+        getContentPane().add(updateLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 220, 60));
 
         draftMailLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         draftMailLbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -158,7 +158,7 @@ public class PastVisits extends javax.swing.JFrame {
                 backLblMouseReleased(evt);
             }
         });
-        getContentPane().add(backLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 60, 80, 40));
+        getContentPane().add(backLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 80, 90, 40));
 
         pastVisitsTable.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(66, 133, 244), 3, true));
         pastVisitsTable.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
@@ -193,16 +193,16 @@ public class PastVisits extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(pastVisitsTable);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 1020, 330));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 1360, 340));
 
         timeTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         timeTF.setBorder(null);
         timeTF.setCaretColor(new java.awt.Color(237, 230, 230));
         timeTF.setOpaque(false);
-        getContentPane().add(timeTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 230, 210, 30));
+        getContentPane().add(timeTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 240, 320, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/arjun/images/Past Visits Layout.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 760));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 760));
 
         pack();
         setLocationRelativeTo(null);
@@ -440,8 +440,7 @@ public class PastVisits extends javax.swing.JFrame {
     }//GEN-LAST:event_updateLblMouseReleased
   
     private void draftMailLblMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_draftMailLblMouseReleased
-        new Email(studentIDTF.getText()).setVisible(true);
-        this.dispose();
+    
     }//GEN-LAST:event_draftMailLblMouseReleased
 
     private void backLblMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backLblMouseReleased

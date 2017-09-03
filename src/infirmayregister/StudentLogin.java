@@ -49,6 +49,9 @@ public class StudentLogin extends javax.swing.JFrame {
         jOptionPane1.setPreferredSize(new java.awt.Dimension(500, 500));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1385, 830));
+        setMinimumSize(new java.awt.Dimension(1385, 830));
+        setPreferredSize(new java.awt.Dimension(1385, 830));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         logoutLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -57,7 +60,7 @@ public class StudentLogin extends javax.swing.JFrame {
                 logoutLblMouseReleased(evt);
             }
         });
-        getContentPane().add(logoutLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 650, 240, 40));
+        getContentPane().add(logoutLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 650, 230, 60));
 
         proceedLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         proceedLbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -65,7 +68,7 @@ public class StudentLogin extends javax.swing.JFrame {
                 proceedLblMouseReleased(evt);
             }
         });
-        getContentPane().add(proceedLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 640, 240, 50));
+        getContentPane().add(proceedLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 650, 230, 60));
 
         studentIDTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         studentIDTF.setBorder(null);
@@ -80,7 +83,7 @@ public class StudentLogin extends javax.swing.JFrame {
                 studentIDTFKeyPressed(evt);
             }
         });
-        getContentPane().add(studentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, 280, 40));
+        getContentPane().add(studentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 340, 360, 40));
 
         visitsLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         visitsLbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -88,10 +91,10 @@ public class StudentLogin extends javax.swing.JFrame {
                 visitsLblMouseReleased(evt);
             }
         });
-        getContentPane().add(visitsLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 140, 240, 50));
+        getContentPane().add(visitsLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 150, 230, 60));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/arjun/images/Student Login layout.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 770));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/arjun/images/Student Login Layout.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 760));
 
         pack();
         setLocationRelativeTo(null);

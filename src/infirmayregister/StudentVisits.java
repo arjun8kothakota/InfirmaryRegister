@@ -49,15 +49,15 @@ public class StudentVisits extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1019, 768));
-        setMinimumSize(new java.awt.Dimension(1019, 768));
-        setPreferredSize(new java.awt.Dimension(1019, 768));
+        setMaximumSize(new java.awt.Dimension(1385, 830));
+        setMinimumSize(new java.awt.Dimension(1385, 830));
+        setPreferredSize(new java.awt.Dimension(1385, 830));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         dateTF.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         dateTF.setBorder(null);
         dateTF.setOpaque(false);
-        getContentPane().add(dateTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 290, 40));
+        getContentPane().add(dateTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 310, 40));
 
         dateTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -78,7 +78,7 @@ public class StudentVisits extends javax.swing.JFrame {
         dateTable.setRowHeight(40);
         jScrollPane1.setViewportView(dateTable);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 1020, 360));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 1340, 460));
 
         backLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         backLbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -86,7 +86,7 @@ public class StudentVisits extends javax.swing.JFrame {
                 backLblMouseReleased(evt);
             }
         });
-        getContentPane().add(backLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 70, 80, 40));
+        getContentPane().add(backLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 80, 80, 40));
 
         enterLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         enterLbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -99,7 +99,7 @@ public class StudentVisits extends javax.swing.JFrame {
                 enterLblKeyPressed(evt);
             }
         });
-        getContentPane().add(enterLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 680, 190, 50));
+        getContentPane().add(enterLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 690, 230, 60));
 
         studentCountLbl.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         studentCountLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -113,7 +113,7 @@ public class StudentVisits extends javax.swing.JFrame {
                 studentCountLblKeyPressed(evt);
             }
         });
-        getContentPane().add(studentCountLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 190, 110, 40));
+        getContentPane().add(studentCountLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 160, 90, 40));
 
         clearLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         clearLbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -121,12 +121,12 @@ public class StudentVisits extends javax.swing.JFrame {
                 clearLblMouseReleased(evt);
             }
         });
-        getContentPane().add(clearLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 680, 190, 50));
+        getContentPane().add(clearLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 690, 230, 60));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/arjun/images/Student Visits Layout.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 770));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 760));
 
-        setSize(new java.awt.Dimension(1037, 807));
+        setSize(new java.awt.Dimension(1377, 799));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

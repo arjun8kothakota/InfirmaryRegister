@@ -41,9 +41,9 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1023, 768));
-        setMinimumSize(new java.awt.Dimension(1023, 768));
-        setPreferredSize(new java.awt.Dimension(1023, 768));
+        setMaximumSize(new java.awt.Dimension(1385, 830));
+        setMinimumSize(new java.awt.Dimension(1385, 830));
+        setPreferredSize(new java.awt.Dimension(1385, 830));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         passwordTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -54,7 +54,7 @@ public class Login extends javax.swing.JFrame {
                 passwordTFKeyPressed(evt);
             }
         });
-        getContentPane().add(passwordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, 280, 30));
+        getContentPane().add(passwordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 370, 380, 30));
 
         usernameTF.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         usernameTF.setBorder(null);
@@ -64,7 +64,7 @@ public class Login extends javax.swing.JFrame {
                 usernameTFActionPerformed(evt);
             }
         });
-        getContentPane().add(usernameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 320, 280, 30));
+        getContentPane().add(usernameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 270, 370, 40));
 
         loginLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         loginLbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -72,10 +72,11 @@ public class Login extends javax.swing.JFrame {
                 loginLblMouseReleased(evt);
             }
         });
-        getContentPane().add(loginLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 650, 240, 50));
+        getContentPane().add(loginLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 650, 230, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/arjun/images/Login layout.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jLabel1.setPreferredSize(new java.awt.Dimension(100, 768));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, -1));
 
         pack();
         setLocationRelativeTo(null);

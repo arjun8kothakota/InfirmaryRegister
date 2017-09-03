@@ -6,6 +6,11 @@
 
 package infirmayregister;
 
+import com.mysql.jdbc.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 /**
  *
  * @author Arjun Kothakota
@@ -20,6 +25,51 @@ public class HomePage extends javax.swing.JFrame {
     public HomePage(String message){
         initComponents();
         studentIDTF.setText(message);
+        
+        String studentID = studentIDTF.getText();
+        String string = null;       
+        Statement statement = null;
+        ResultSet resultSet = null;
+        
+        try {
+
+            Class.forName("java.sql.Driver");
+            String database = "jdbc:mysql://localhost:3306/infirmary";
+            Connection connection = (Connection) DriverManager.getConnection(database, "root", "arjun");
+            statement = (com.mysql.jdbc.Statement) connection.createStatement();
+            String sql= "select * from students where StudentID= '" + studentID + "'";
+            
+            resultSet=statement.executeQuery(sql);
+            if(resultSet.next()){
+                String studentName = resultSet.getString("studentName");
+                String classAndSection = resultSet.getString("Class_Section");
+                String board = resultSet.getString("Board");
+                
+                //String image= resultSet.getString("image");
+                
+                studentNameTF.setEnabled(true);
+                classTF.setEnabled(true);
+                boardTF.setEnabled(true);                
+                
+                
+                //imageLbl.setEnabled(true);
+                
+                studentNameTF.setText(studentName);
+                classTF.setText(classAndSection);
+                boardTF.setText(board);
+                
+                
+                                             
+            }
+            resultSet.close();
+            statement.close();
+            connection.close();
+            
+            
+        }
+        catch(Exception e){
+            System.out.println("The catch is activated.");
+        }
     }
 
     /** This method is called from within the constructor to
@@ -33,14 +83,18 @@ public class HomePage extends javax.swing.JFrame {
 
         studentInfoBtn = new javax.swing.JLabel();
         pastiVisitsBtn = new javax.swing.JLabel();
-        examinationBtn = new javax.swing.JLabel();
         emailBtn = new javax.swing.JLabel();
         logoutBtn = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        studentNameTF = new javax.swing.JTextField();
         studentIDTF = new javax.swing.JTextField();
+        classTF = new javax.swing.JTextField();
+        boardTF = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(1024, 768));
+        setMaximumSize(new java.awt.Dimension(1385, 830));
+        setMinimumSize(new java.awt.Dimension(1385, 830));
+        setPreferredSize(new java.awt.Dimension(1385, 830));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         studentInfoBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -49,7 +103,7 @@ public class HomePage extends javax.swing.JFrame {
                 studentInfoBtnMouseReleased(evt);
             }
         });
-        getContentPane().add(studentInfoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 200, 220));
+        getContentPane().add(studentInfoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 200, 260));
 
         pastiVisitsBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pastiVisitsBtn.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -57,15 +111,7 @@ public class HomePage extends javax.swing.JFrame {
                 pastiVisitsBtnMouseReleased(evt);
             }
         });
-        getContentPane().add(pastiVisitsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 160, 190, 220));
-
-        examinationBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        examinationBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                examinationBtnMouseReleased(evt);
-            }
-        });
-        getContentPane().add(examinationBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 460, 200, 220));
+        getContentPane().add(pastiVisitsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 170, 210, 260));
 
         emailBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         emailBtn.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -73,7 +119,7 @@ public class HomePage extends javax.swing.JFrame {
                 emailBtnMouseReleased(evt);
             }
         });
-        getContentPane().add(emailBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 460, 190, 220));
+        getContentPane().add(emailBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 170, 200, 260));
 
         logoutBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         logoutBtn.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -81,17 +127,32 @@ public class HomePage extends javax.swing.JFrame {
                 logoutBtnMouseReleased(evt);
             }
         });
-        getContentPane().add(logoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 60, 120, 40));
+        getContentPane().add(logoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 80, 90, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/arjun/images/Home Page.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 760));
+        studentNameTF.setEditable(false);
+        studentNameTF.setBorder(null);
+        studentNameTF.setOpaque(false);
+        getContentPane().add(studentNameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 590, 220, 40));
 
         studentIDTF.setEditable(false);
         studentIDTF.setBorder(null);
         studentIDTF.setOpaque(false);
-        getContentPane().add(studentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 720, 150, 30));
+        getContentPane().add(studentIDTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 590, 220, 40));
 
-        setSize(new java.awt.Dimension(1038, 797));
+        classTF.setEditable(false);
+        classTF.setBorder(null);
+        classTF.setOpaque(false);
+        getContentPane().add(classTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 650, 220, 40));
+
+        boardTF.setEditable(false);
+        boardTF.setBorder(null);
+        boardTF.setOpaque(false);
+        getContentPane().add(boardTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 650, 220, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/arjun/images/Home Page Layout.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        setSize(new java.awt.Dimension(1378, 807));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -107,10 +168,6 @@ public class HomePage extends javax.swing.JFrame {
                 new PastVisits(studentID).setVisible(true);
                 this.dispose();
     }//GEN-LAST:event_pastiVisitsBtnMouseReleased
-
-    private void examinationBtnMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_examinationBtnMouseReleased
-        
-    }//GEN-LAST:event_examinationBtnMouseReleased
 
     private void emailBtnMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailBtnMouseReleased
                 new Email(studentIDTF.getText()).setVisible(true);
@@ -158,13 +215,15 @@ public class HomePage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField boardTF;
+    private javax.swing.JTextField classTF;
     private javax.swing.JLabel emailBtn;
-    private javax.swing.JLabel examinationBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel logoutBtn;
     private javax.swing.JLabel pastiVisitsBtn;
     private javax.swing.JTextField studentIDTF;
     private javax.swing.JLabel studentInfoBtn;
+    private javax.swing.JTextField studentNameTF;
     // End of variables declaration//GEN-END:variables
 
 }
